@@ -70,6 +70,26 @@ const Chat = () => {
     }
   }, [selectedOrderId, fetchMessages]);
 
+  // Poll for new messages every 3 seconds
+  useEffect(() => {
+    if (!selectedOrderId) return;
+
+    const pollInterval = setInterval(() => {
+      fetchMessages(selectedOrderId);
+    }, 3000);
+
+    return () => clearInterval(pollInterval);
+  }, [selectedOrderId, fetchMessages]);
+
+  // Poll for conversation updates every 5 seconds
+  useEffect(() => {
+    const conversationPollInterval = setInterval(() => {
+      fetchConversations();
+    }, 5000);
+
+    return () => clearInterval(conversationPollInterval);
+  }, [fetchConversations]);
+
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
