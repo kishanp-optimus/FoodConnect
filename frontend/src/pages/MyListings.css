@@ -1,0 +1,106 @@
+/* My Listings Page Styles */
+.my-listings-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+/* Header */
+.my-listings-page .page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+.my-listings-page .header-content h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.my-listings-page .header-content p {
+  color: var(--gray-500);
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+/* Listings Summary */
+.listings-summary {
+  display: flex;
+  gap: var(--space-6);
+  padding: var(--space-5);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: var(--space-3);
+  border-right: 1px solid var(--gray-100);
+}
+
+.summary-item:last-child {
+  border-right: none;
+}
+
+.summary-value {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* Listings Grid */
+.my-listings-page .listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .my-listings-page .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .my-listings-page .page-header {
+    flex-direction: column;
+  }
+  
+  .listings-summary {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  
+  .summary-item {
+    flex: 1 1 30%;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-100);
+    padding-bottom: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .my-listings-page .listings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-item {
+    flex: 1 1 100%;
+  }
+}

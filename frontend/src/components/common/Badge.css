@@ -1,0 +1,139 @@
+/* Badge Component Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-family);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.badge-sm {
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.badge-md {
+  padding: 4px 12px;
+  font-size: var(--font-size-xs);
+}
+
+.badge-lg {
+  padding: 6px 16px;
+  font-size: var(--font-size-sm);
+}
+
+/* Variants */
+.badge-default {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.badge-primary {
+  background-color: var(--primary-50);
+  color: var(--primary-dark);
+}
+
+.badge-secondary {
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.badge-success {
+  background-color: var(--success-light);
+  color: #065F46;
+}
+
+.badge-warning {
+  background-color: var(--warning-light);
+  color: #92400E;
+}
+
+.badge-error {
+  background-color: var(--error-light);
+  color: #991B1B;
+}
+
+.badge-info {
+  background-color: var(--info-light);
+  color: #1E40AF;
+}
+
+.badge-accent {
+  background-color: var(--accent-50);
+  color: var(--accent-dark);
+}
+
+/* Solid Variants */
+.badge-solid-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+}
+
+.badge-solid-success {
+  background: linear-gradient(135deg, var(--success) 0%, #34D399 100%);
+  color: var(--white);
+}
+
+.badge-solid-warning {
+  background: linear-gradient(135deg, var(--warning) 0%, #FBBF24 100%);
+  color: var(--white);
+}
+
+.badge-solid-error {
+  background: linear-gradient(135deg, var(--error) 0%, #F87171 100%);
+  color: var(--white);
+}
+
+.badge-solid-accent {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: var(--white);
+}
+
+/* Dot Indicator */
+.badge-dot-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+}
+
+.badge-success .badge-dot-indicator {
+  background-color: var(--success);
+}
+
+.badge-warning .badge-dot-indicator {
+  background-color: var(--warning);
+}
+
+.badge-error .badge-dot-indicator {
+  background-color: var(--error);
+}
+
+/* Status Badges */
+.badge-pending {
+  background-color: var(--warning-light);
+  color: #92400E;
+}
+
+.badge-accepted {
+  background-color: var(--success-light);
+  color: #065F46;
+}
+
+.badge-rejected {
+  background-color: var(--error-light);
+  color: #991B1B;
+}
+
+.badge-packaged {
+  background-color: var(--info-light);
+  color: #1E40AF;
+}
+
+.badge-non-packaged {
+  background-color: var(--accent-50);
+  color: var(--accent-dark);
+}

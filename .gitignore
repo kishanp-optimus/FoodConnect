@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.env
+.env
+.venv
+venv/
+build/
+dist/
+.eggs/
+*.sqlite3
+*.db
+*.log
+*.pot
+*.mo
+*.pyc
+*.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+.tox/
+
+# FastAPI/Starlette
+instance/
+
+# VSCode
+.vscode/
+
+# React/Node
+node_modules/
+build/
+dist/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.tgz
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Images/uploads
+uploads/
+
+# Misc
+*.swp
+*.swo
+.idea/
+*.iml
+
+# Test coverage
+coverage/
+
+# Mac
+.AppleDouble
+.LSOverride
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# JetBrains
+*.idea/
+*.iml
+
+# Logs
+*.log
+
+# Local env
+.envrc
+
+# Python virtual environments
+pip-wheel-metadata/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Others
+*.bak
+*.tmp
+*.orig
+*.old
+
+# End of file

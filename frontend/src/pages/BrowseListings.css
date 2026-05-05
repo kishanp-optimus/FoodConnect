@@ -1,0 +1,239 @@
+/* Browse Listings Page Styles */
+.browse-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+/* Header */
+.browse-header {
+  margin-bottom: var(--space-6);
+}
+
+.header-content h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.header-content p {
+  color: var(--gray-500);
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: var(--space-6);
+}
+
+.search-form {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.search-input {
+  width: 100%;
+  height: 48px;
+  padding: var(--space-3) var(--space-4);
+  padding-left: 48px;
+  font-size: var(--font-size-base);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-toggle:hover,
+.filter-toggle.active {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-count {
+  background: var(--primary);
+  color: var(--white);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+}
+
+/* Filters Panel */
+.filters-panel {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-end;
+  padding: var(--space-5);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-3);
+  animation: slideDown var(--transition-fast) ease-out;
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.filter-group label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: var(--space-2);
+}
+
+.filter-select {
+  width: 100%;
+  height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  background: var(--white);
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.price-input {
+  flex: 1;
+  height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.price-inputs span {
+  color: var(--gray-400);
+  font-size: var(--font-size-sm);
+}
+
+.filter-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Results Section */
+.results-section {
+  min-height: 400px;
+}
+
+.results-header {
+  margin-bottom: var(--space-4);
+}
+
+.results-count {
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.results-count strong {
+  color: var(--gray-900);
+}
+
+/* Listings Grid */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filters-panel {
+    flex-wrap: wrap;
+  }
+  
+  .filter-group {
+    flex: 1 1 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-wrap: wrap;
+  }
+  
+  .search-input-wrapper {
+    flex: 1 1 100%;
+  }
+  
+  .filters-panel {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filter-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+  
+  .filter-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+}
